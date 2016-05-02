@@ -22,6 +22,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+import java.io.FileInputStream;
+import java.util.ArrayList;
 
 import info.guardianproject.netcipher.proxy.OrbotHelper;
 
@@ -258,5 +262,7 @@ public class SettingsActivity extends PreferenceActivity  {
 
     public static void initSettings(Context context) {
         NewPipeSettings.initSettings(context);
+        NewPipeSettings.SubReadIn("Subscriptions.txt", context);
+
     }
 }

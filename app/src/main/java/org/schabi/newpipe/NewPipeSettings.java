@@ -25,8 +25,16 @@ import android.content.SharedPreferences;
 import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 /**
  * Helper for global settings
@@ -68,4 +76,27 @@ public class NewPipeSettings {
     private static File getFolder(String defaultDirectoryName) {
         return new File(Environment.getExternalStorageDirectory(),defaultDirectoryName);
     }
+//CS490
+    public static void SubReadIn(String filename, Context context){
+        int c;
+        String temp="";
+        try{
+            FileInputStream subscriptionFileRead = context.openFileInput(filename);
+
+            ArrayList subscriptionArray = new ArrayList();
+            while( ( c = subscriptionFileRead.read()) != -1){
+               for(int i=1; i<=24;i++){
+                   temp = temp + Character.toString((char)i);
+                }
+                subscriptionArray.add(temp);
+                temp="";
+                c--;
+            }
+        }
+        catch(Exception e){
+            System.out.println("SubArray failed to read");
+        }
+
+    }
+//end CS490
 }

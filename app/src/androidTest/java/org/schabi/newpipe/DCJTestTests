@@ -1,0 +1,79 @@
+public class subscriberTests{
+	private Subscriber subscribe;
+@Given(“Application is running and user is watching a video”
+Public void subscribeButtonTest(){
+}
+@When(“User selects channel”)
+Public void subscribeButtonShow(){
+	show(app.subscribeButton);
+}
+@Given(“User selects channel to subscribe to”
+Public void toSubscribeTest(){
+}
+@When(“User touches “Subscribe” button”)
+Public void addChannel(){
+	subscribeChannel.add(Username);
+}
+@Given(“Subscribe Menu”)
+Public void subscribeMenuTest(){
+}
+@When(“User selects settings menu”)
+Public void appmenu(){
+	App.show.menu();
+}
+@Given(“Subscribe Menu options”)
+Public void subscribeMenuOptionsTest(){
+}
+@When(“User selects Subscription tab in settings”)
+Public void subscriptionmenu(){
+	List.show.usernames();
+}
+@Given(“User wants to unsubscribe from channel”)
+Public void unsubscriptionTest(){
+}
+@When(“user selects a channel”)
+Public void appmenu(){
+	App.show.unsubscribe();
+}
+@Given(“Subscribe Menu”)
+Public void subscribeMenuTest(){
+}
+@When(“User selects settings menu”)
+Public void appmenu(){
+	App.show.menu();
+}
+
+@Given(“User has no subscribed channels”){
+}
+@When(“App is loaded”//”User returns to Homescreen”)
+Public void noSubscribe(subscribe = 0){
+	appHome = “blank”;
+}
+@Given(“User has 1 subscribed channel”){
+}
+@When(“App is loaded” // “User returns to Subscription Screen”)
+Public void oneSubscribe(subscribe = 1){
+	appHome = show(subscribe.thumbnail, subscribe.title, subscribe.channel);
+}
+@Given(“User has 2 to 10 subscribed channels”){
+}
+@When(“App is loaded”//”User returns to Subscription Screen”)
+public void onePage(subscribe > 1 && subscribe <=10){
+	for(int subscribeChannel = 1; subscribeChannel =10; subscribeChannel++){
+		appHome = show(subscribe.thumbnail, subscribe.title, subscribe.channel);
+	}
+}
+@Given(“User has 10+ Subscribed channels”){
+}
+@Given(“App is loaded”//”User returns to Subscription Screen”)
+public void multiPage(subscribe > 10){
+	for(int subscribePage = 1; subscribePage = (subscribe/10); subscribePage++){
+		for(int subscribeChannel = 1; subscribeChannel =10; subscribeChannel++){
+			appHome = show(subscribe.thumbnail, subscribe.title, subscribe.channel)
+				&& show(app.nextPage);
+		}
+	if(subscribePage /= (subscribe/10)&&subscribePage>1){
+		show(app.previousPage) ;
+	}
+}
+

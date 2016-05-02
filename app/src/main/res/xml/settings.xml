@@ -4,6 +4,19 @@
     android:key="general_preferences">
 
     <PreferenceCategory
+        android:key="@string/settings_category_subscriptions"
+        android:title="@string/subscriptions_title"
+        android:textAllCaps="true">
+
+        <ListPreference
+            android:key="@string/default_resolution_key"
+            android:title="@string/subscription_list"
+            android:entries="@array/subscriptionArrayList"
+            android:entryValues="@array/subscriptionArrayList"
+            android:defaultValue="@string/default_subscription_value"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="@string/settings_category_video_audio"
         android:title="@string/settings_category_video_audio_title"
         android:textAllCaps="true">

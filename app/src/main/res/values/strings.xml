@@ -25,6 +25,9 @@
     <string name="use_external_video_player_title">Use external video player</string>
     <string name="use_external_audio_player_title">Use external audio player</string>
 
+//CS490
+    <string name="subscriptions_title">Subscriptions</string>
+    //end CS490
     <string name="download_path_title">Video download path</string>
     <string name="download_path_summary">Path to store downloaded videos in.</string>
     <string name="download_path_dialog_title">Enter download path for videos</string>
@@ -36,6 +39,9 @@
     <string name="autoplay_by_calling_app_title">Autoplay when called from another app</string>
     <string name="autoplay_by_calling_app_summary">Automatically play a video when NewPipe is called from another app.</string>
     <string name="default_resolution_title">Default resolution</string>
+    //CS490
+    <string name="subscription_list">Subscription List</string>
+    //end CS490
     <string name="play_with_kodi_title">Play with Kodi</string>
     <string name="kore_not_found">Kore app not found. Install Kore?</string>
     <string name="fdroid_kore_url" translatable="false">https://f-droid.org/repository/browse/?fdfilter=Kore&amp;fdid=org.xbmc.kore</string>
@@ -58,7 +64,11 @@
     <string-array name="download_options_no_audio">
         <item>Video</item>
     </string-array>
-
+//CS490
+    <string-array name="subscription_list">
+        <item>subscriptionArrayList</item>
+    </string-array>
+//end CS490
     <string-array name="download_options_no_video">
         <item>Audio</item>
     </string-array>

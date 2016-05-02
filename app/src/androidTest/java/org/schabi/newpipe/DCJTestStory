@@ -1,0 +1,48 @@
+Scenario: Graphical “Subscribe” button appears as option for any channel selected.
+Given: Application is running and user is watching a video.
+When: User selects channel
+Then: “Subscribe” virtual button appears.
+
+Scenario: User selects channel to be subscribed to
+Given: Application is running
+And: user selects channel.
+When: User touches “Subscribe” button
+Then: Channel’s username is saved
+
+Scenario: Subscribe Menu
+Given: Application is running.
+When: User selects settings menu
+Then: Subscription tab appears.
+
+Scenario: Subscribe Menu options.
+Given: User is in Settings
+When: User selects Subscription tab
+Then: Subscription tab shows all Subscribed usernames.
+
+Scenario: User wishes to unsubscribe from channel.
+Given: User is in Subscription menu tab
+And: user wishes to unsubscribe from a channel.
+When: User selects a channel
+Then:  Virtual button appears for “Remove Subscription”
+
+Scenario: User has no subscribed channels
+Given: The user has not subscribed to any channels
+When: The app is first loaded/ User returns to Subscription screen.
+Then: The Subscription screen of the application remains blank.
+
+Scenario: User has 1 subscribed channel.
+Given: The user has subscribed to one favorite channel.
+When: The app is loaded/ User returns to Subscription screen.
+Then: The Subscription page shows the Channel ID
+
+Scenario: User has 2+ subscribed channels.
+Given: The user has subscribed to 2 or more favorite channels.
+When: App is first loaded /User returns to Subscription screen.
+Then: The Subscription page shows the Channel IDs for each Channel subscribed to
+
+Scenario: User selects a channel from the Subscription screen.
+Given: The User has 1+ channel(s) subscribed to
+When: the User selects a channel ID from the Subscription screen
+THen: The application shows the videos from the channel selected. 
+
+

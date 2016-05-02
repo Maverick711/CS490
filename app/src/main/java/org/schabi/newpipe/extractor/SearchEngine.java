@@ -43,12 +43,10 @@ public abstract class SearchEngine {
         return collector;
     }
 
-    public abstract ArrayList<String> suggestionList(
-            String query,String contentCountry, Downloader dl)
+    public abstract ArrayList<String> suggestionList(String query,String contentCountry, Downloader dl)
             throws ExtractionException, IOException;
 
     //Result search(String query, int page);
-    public abstract StreamPreviewInfoCollector search(
-            String query, int page, String contentCountry, Downloader dl)
+    public abstract StreamPreviewInfoCollector search(String query, int page, String contentCountry, Downloader dl)
             throws ExtractionException, IOException;
 }
